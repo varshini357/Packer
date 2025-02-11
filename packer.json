@@ -13,8 +13,8 @@
   "_comment2": "packer build -var-file packer-vars.json template.json",
   "builders": [
     {
-      "access_key": "{{user `aws_access_key`}}",
-      "secret_key": "{{user `aws_secret_key`}}",
+      "_aws_access_key": "{{user `aws_access_key`}}",
+      "_aws_secret_key": "{{user `aws_secret_key`}}",
       "type": "amazon-ebs",
       "region": "{{user `region`}}",
       "source_ami": "{{user `source_ami`}}",
